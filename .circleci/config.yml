@@ -2,6 +2,12 @@
 #
 # Check https://circleci.com/docs/2.0/language-go/ for more details
 version: 2
+workflows:
+  version: 2
+  one_and_two:
+    jobs:
+      - one
+      - two
 jobs:
   one:
     docker:
