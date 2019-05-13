@@ -3,10 +3,15 @@ package main
 import "fmt"
 
 func main() {
-
-	for i := 0; i < 100; i++{
-		i++
+	b := 0
+	for i := 0; i < 5; i++{
+		b = myFunc(i)
 	}
+	fmt.Println("result is ", b)
+}
 
-	fmt.Println("Hello, world.")
+func myFunc(x int) int{
+	v := 5
+	x = v * x
+	return x*x
 }

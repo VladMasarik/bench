@@ -3,7 +3,7 @@
 # Check https://circleci.com/docs/2.0/language-go/ for more details
 version: 2
 jobs:
-  build:
+  one:
     docker:
       # specify the version
       - image: circleci/golang:1.12
@@ -25,3 +25,13 @@ jobs:
       - run: go get -v -t -d ./...
       - run: go test -v ./...
       - run: go build -o a.out && ./a.out
+  two:
+    docker:
+      - image: circleci/golang:1.12
+    working_directory: /go/src/github.com/VladMasarik/bench
+    steps:
+      - checkout
+      - run: go get -v -t -d ./...
+      - run: go test -v ./...
+      - run: go build -o a.out && ./a.out
+      - run: go test -bench . -v ./...
