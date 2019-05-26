@@ -31,7 +31,7 @@ jobs:
       - run: go get -v -t -d ./...
       - run: go test -v ./...
       - run: go build -o a.out && ./a.out
-  two:
+  build:
     docker:
       - image: circleci/golang:1.12
     working_directory: /go/src/github.com/VladMasarik/bench
