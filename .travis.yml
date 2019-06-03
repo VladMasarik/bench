@@ -10,4 +10,6 @@ go_import_path: github.com/vladmasarik/bench
 script:
 - curl g.co
 - go build -o a.out && ./a.out
+- echo $BENCH
+- echo ${BENCH}
 - go test -bench ${BENCH} -v ./...
