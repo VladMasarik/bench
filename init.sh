@@ -22,12 +22,12 @@ echo $COMMENT
 echo ${BENCH}
 go test -bench ${COMMENT} -v ./... > old.txt
 go test -bench ${COMMENT} -v ./... > new.txt
-benchcmp old.txt new.txt > out.txt
+#benchcmp old.txt new.txt > out.txt
 
 
 echo $COMMENTS_URL
 
-COMMENT=$(cat out.txt)
+COMMENT=$(cat new.txt)
 PAYLOAD=$(jq --arg body "$COMMENT" '{body: $body}')
 echo $COMMENT
 echo $PAYLOAD
