@@ -6,8 +6,8 @@ if [ -z ${BENCH+x} ]; then
 fi
 
 curl g.co
-go get -u golang.org/x/tools/...
 go build -o a.out && ./a.out
+go get -u golang.org/x/tools/...
 echo $BENCH
 echo ${BENCH}
 go test -bench ${BENCH} -v ./... > old.txt
