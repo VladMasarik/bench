@@ -6,6 +6,13 @@ if [ -z ${BENCH+x} ]; then
 fi
 
 curl g.co
+
+echo $PATH
+
+ls -lav
+
+which go
+
 go build -o a.out && ./a.out
 go get -u golang.org/x/tools/...
 echo $BENCH
