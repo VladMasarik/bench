@@ -18,10 +18,10 @@ which go
 
 go build -o a.out && ./a.out
 go get -u golang.org/x/tools/...
-echo $BENCH
+echo $COMMENT
 echo ${BENCH}
-go test -bench ${BENCH} -v ./... > old.txt
-go test -bench ${BENCH} -v ./... > new.txt
+go test -bench ${COMMENT} -v ./... > old.txt
+go test -bench ${COMMENT} -v ./... > new.txt
 benchcmp old.txt new.txt > out.txt
 
 
