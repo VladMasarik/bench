@@ -1,7 +1,6 @@
 dist: trusty
 language: go
-os:
-  - linux
+os: linux
 
 go:
   - 1.12.x
@@ -11,7 +10,6 @@ go_import_path: github.com/vladmasarik/bench
 
 
 script:
-- go get -v -t -d ./...
 - curl g.co
 - go build -o a.out && ./a.out
 - go test -bench ${BENCH} -v ./...
