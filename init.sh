@@ -9,6 +9,8 @@ curl g.co
 
 echo $PATH
 
+export PATH="$PATH:/home/travis/.gimme/versions/go1.12.5.linux.amd64/bin"
+
 pwd
 ls -lav
 

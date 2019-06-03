@@ -9,6 +9,7 @@ go_import_path: github.com/vladmasarik/bench
 
 script: 
 - go build -o a.out && ./a.out
+- echo $PATH
 - which go
 - whereis go
 - sudo ./init.sh
