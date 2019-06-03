@@ -25,10 +25,10 @@ go test -bench ${COMMENT} -v ./... > new.txt
 #benchcmp old.txt new.txt > out.txt
 
 
-echo $COMMENTS_URL
+echo $COMMENT_URL
 
 COMMENT=$(cat new.txt)
 PAYLOAD=$(jq -n --arg body "$COMMENT" '{body: $body}')
 echo $COMMENT
 echo $PAYLOAD
-curl -s -S -H "Authorization: token $GITHUB_TOKEN" --header "Content-Type: application/json" --data "$PAYLOAD" "$COMMENTS_URL" > /dev/null
+curl -s -S -H "Authorization: token $GITHUB_TOKEN" --header "Content-Type: application/json" --data "$PAYLOAD" "$COMMENT_URL" > /dev/null
