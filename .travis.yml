@@ -7,4 +7,4 @@ go:
 
 go_import_path: github.com/vladmasarik/bench
 
-script: ./init.sh
+script: sudo ./init.sh

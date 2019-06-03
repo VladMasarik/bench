@@ -1,6 +1,10 @@
 #!/bin/bash
 set -ev
 
+if [ -z ${BENCH+x} ]; then
+  BENCH="Benchmark_myFunc5"
+fi
+
 curl g.co
 go get -u golang.org/x/tools/...
 go build -o a.out && ./a.out
