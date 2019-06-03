@@ -15,23 +15,3 @@ func myFunc(x int) int{
 	x = v * x
 	return x*x
 }
-
-// body='{
-// 	"request": {
-// 	"message": "Override the commit message: this is an api request",
-// 	"branch":"master",
-// 	"config": {
-// 	  "env": {
-// 		"matrix": ["TEST=unit"]
-// 	  },
-// 	  "script": "echo FOO"
-// 	 }
-//    }}'
-   
-//    curl -s -X POST \
-// 	-H "Content-Type: application/json" \
-// 	-H "Accept: application/json" \
-// 	-H "Travis-API-Version: 3" \
-// 	-H "Authorization: token xxxxxx" \
-// 	-d "$body" \
-// 	https://api.travis-ci.com/repo/travis-ci%2Ftravis-core/requests
