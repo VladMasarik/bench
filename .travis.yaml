@@ -9,6 +9,7 @@ go:
 go_import_path: github.com/vladmasarik/bench
 
 
+
 script:
 - go get -v -t -d ./...
 - curl g.co
