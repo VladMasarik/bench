@@ -9,6 +9,7 @@ curl g.co
 
 echo $PATH
 
+pwd
 ls -lav
 
 which go
