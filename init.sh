@@ -23,7 +23,6 @@ echo ${BENCH}
 go test -bench ${BENCH} -v ./... > old.txt
 go test -bench ${BENCH} -v ./... > new.txt
 benchcmp old.txt new.txt > out.txt
-apt-get install jq -qq
 
 COMMENT=$(cat out.txt)
 PAYLOAD=$(echo '{}' | jq --arg body "$COMMENT" '.body = $body')

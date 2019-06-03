@@ -12,4 +12,4 @@ script:
 - echo $PATH
 - which go
 - whereis go
-- sudo ./init.sh
+- ./init.sh
